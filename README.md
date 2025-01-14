@@ -181,6 +181,29 @@ You might ask: OK, but what use is that to me? I understand your frustration, th
 
 ## Dependency Injection
 
+> Dependency injection facilitates the management of dependencies between components by delegating them to an external manager (often called a "dependency injection container"), which handles the creation and binding of necessary dependencies without the components having to manage these details themselves.
+
+Dependency injection is an important concept in object-oriented programming.
+
+This concept allows for the division of classes into services and for associating them without making them dependent on one another.
+
+Consider a case where a user can receive notifications about a bill. It is preferable to proceed as follows:
+
+- A User service
+- A Notification service
+
+And to create a dependency injection in the user class.
+
+The reason for doing this is that, suppose your project manager asks you that when a product is available on your e-commerce site, it should also be possible to send notifications to users.
+
+We then have a service that is called in two different places. This notification service does not depend on any specific class. It is simply implemented in a class that requires this service.
+
+This allows work on the notification service independently of the classes calling this service.
+
+### Example
+
+
+[Read more about DI](https://learn.microsoft.com/fr-fr/dotnet/core/extensions/dependency-injection)
 
 ## Exercices
 
