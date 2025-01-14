@@ -201,9 +201,67 @@ We then have a service that is called in two different places. This notification
 This allows work on the notification service independently of the classes calling this service.
 
 ### Example
+Now let's move on to an example, which I hope will help you understand.
 
+### 1. Define an Interface
+First, we define an interface that specifies the methods the dependent implementation must provide. For example, an IService interface that has an Execute method.
 
-[Read more about DI](https://learn.microsoft.com/fr-fr/dotnet/core/extensions/dependency-injection)
+```csharp
+public interface IService
+{
+    void Execute();
+}
+```
+
+### 2. Create an Implementation of the Interface
+Next, we create a concrete class that implements this interface. This class will perform the specific functionality.
+
+```csharp
+public class MyService : IService
+{
+    public void Execute()
+    {
+        Console.WriteLine("Service is executed.");
+    }
+}
+```
+
+### 3. Use Dependency Injection in a Consumer Class
+Now, we create a class that consumes IService. This class does not create an instance of MyService directly but receives an instance through its constructor. This is called "dependency injection."
+
+```csharp
+public class Consumer
+{
+    private IService _service;
+
+    public Consumer(IService service)
+    {
+        _service = service;
+    }
+
+    public void RunService()
+    {
+        _service.Execute();
+    }
+}
+```
 
 ## Exercices
+### 1. Abstract Classes and Polymorphism
+Create an abstract class `Vehicle` with an abstract method `Start()`. Define two subclasses, `Car` and `Motorcycle`, which implement the `Start()` method. Each subclass should have a different message when starting. Test polymorphism by creating a list of Vehicle objects and starting each `vehicle` in the loop.
+
+### 2. Interface and Polymorphism
+Define an interface `Animal` with a method `MakeNoise()`. Implement this interface in the classes `Dog` and `Cat`, where `MakeNoise()` will display "Barks" for the Dog and "Meows" for the Cat. Create a list of `Animal` and iterate through it to call `MakeNoise()` on each animal, demonstrating polymorphism.
+
+### 3. Abstract Class and Interface
+Create an abstract class `Shape` with an abstract method `CalculateArea()`. Create an interface Paintable with a method `Paint(color)`. Implement both in the classes `Circle` and `Square` where `CalculateArea()` computes the area of the shape and `Paint(color)` displays a message indicating that the shape has been painted with the specified color.
+
+### 4. Dependency Injection
+Create a class `Engine` with a method `Function()`. Create a class `Car` that requires an `Engine` object in its constructor. Use dependency injection to pass a specific engine to a `Car` object upon creation. Test multiple types of engines (for example, `GasolineEngine`, `DieselEngine`) that can be injected into the Car.
+
+### 5. Interface, Polymorphism, and Dependency Injection
+
+Define an interface `Storage` with a method `Save(data)`. Create two classes that implement this interface: `DiskStorage` and `CloudStorage`. In an Application class, use dependency injection to pass a specific `Storage` implementation to use. Test the application with different storage methods, demonstrating polymorphism in the use of storage strategies.
+
+
 
