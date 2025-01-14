@@ -124,9 +124,7 @@ In this example, you have three cases:
 - `public virtual void Send()`: This method can have an implementation body and must be accompanied by an override in a method of the derived class if it is overridden. This allows extending or modifying the method according to the specific needs of the derived classes.
 
 ## Polymorphism 
->En informatique et en théorie des types, le polymorphisme, du grec ancien polús (plusieurs) et morphê (forme), est le concept consistant à fournir une interface unique à des entités pouvant avoir différents types. 
-
-// Note override facilite le polymorphisme
+> In computer science and type theory, polymorphism, from the ancient Greek polús (many) and morphê (form), is the concept of providing a single interface to entities that can have different types.
 
 ```csharp
 
@@ -159,9 +157,30 @@ public class Circle : Form
         return (float) (Math.PI * Math.Pow(radius, 2));
     }
 }
-
 ```
+
+Now let's try to understand how we instantiate our two classes.
+
+Usually, we proceed this way:
+
+```csharp
+Square square = new {side = 12.3f};
+Circle circle = new {radius = 23.2f};
+```
+
+But with polymorphism, the interface can become the type.
+
+```csharp
+Form square = new Square {side = 12.3f};
+Form circle = new Circle {radius = 23.2f};  
+```
+
+You might ask: OK, but what use is that to me? I understand your frustration, that's why we need to move on to the section on "dependency injection".
+
+[See more about Polymorphism](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism)
 
 ## Dependency Injection
 
+
 ## Exercices
+
