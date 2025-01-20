@@ -264,4 +264,6 @@ Create a class `Engine` with a method `Function()`. Create a class `Car` that re
 Define an interface `Storage` with a method `Save(data)`. Create two classes that implement this interface: `DiskStorage` and `CloudStorage`. In an Application class, use dependency injection to pass a specific `Storage` implementation to use. Test the application with different storage methods, demonstrating polymorphism in the use of storage strategies.
 
 
+---
 
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGN1ZDZ2Y2Z2eW5jZGhtZXgzY2thYzQ1dTgzb3JhamM5bmNwMnpycCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RvEQvcwu8G4nqpyeTe/giphy.gif)
