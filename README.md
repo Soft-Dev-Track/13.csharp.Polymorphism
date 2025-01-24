@@ -248,21 +248,99 @@ public class Consumer
 
 ## Exercices
 ### 1. Abstract Classes and Polymorphism
-Create an abstract class `Vehicle` with an abstract method `Start()`. Define two subclasses, `Car` and `Motorcycle`, which implement the `Start()` method. Each subclass should have a different message when starting. Test polymorphism by creating a list of Vehicle objects and starting each `vehicle` in the loop.
+
+- Define an Abstract Class:
+    - Create an abstract class called `Vehicle`.
+    - Add an abstract method named **Start()** in the `Vehicle` class. This method will be implemented by subclasses to define specific behavior when the vehicle starts.
+
+- Create Subclasses:
+    - Define a subclass `Car` that inherits from Vehicle.
+        - Implement the **Start()** method to display a message specific to starting a car (e.g., "The car starts with a roar.").
+    - Define another subclass `Motorcycle` that also inherits from Vehicle.
+        - Implement the **Start()** method to display a message specific to starting a motorcycle (e.g., "The motorcycle starts with a loud rev.").
+
+- Test Polymorphism:
+    - Create a list of `Vehicle` objects, where each object is an instance of either `Car` or `Motorcycle`.
+    - Loop through the list and call the **Start()** method on each object.
+    - Ensure that the correct implementation of **Start()** is called for each object, depending on whether it is a `Car` or a `Motorcycle`.
+
+- Expected Outcome:
+    - When iterating through the list and calling **Start()** on each object, you should see the specific message for each type of vehicle printed, demonstrating polymorphism in action.
 
 ### 2. Interface and Polymorphism
-Define an interface `Animal` with a method `MakeNoise()`. Implement this interface in the classes `Dog` and `Cat`, where `MakeNoise()` will display "Barks" for the Dog and "Meows" for the Cat. Create a list of `Animal` and iterate through it to call `MakeNoise()` on each animal, demonstrating polymorphism.
+- Define an Interface:
+    - Create an interface named `Animal`.
+    - Add a method **MakeNoise()** in the `Animal` interface. This method will represent a common behavior for all animals, allowing them to produce a sound.
+
+- Implement the Interface in Classes:
+    - Create a class `Dog` that implements the `Animal` interface.
+        - Define the **MakeNoise()** method to display the sound specific to a dog, such as "Barks".
+    - Create another class `Cat` that implements the `Animal` interface.
+        - Define the **MakeNoise()** method to display the sound specific to a cat, such as "Meows".
+
+- Test Polymorphism:
+    - Create a list of `Animal` objects, where each object is an instance of either `Dog` or `Cat`.
+    - Iterate through the list and call the **MakeNoise()** method on each object.
+    - Polymorphism should ensure that the correct implementation of **MakeNoise()** is executed for each animal, regardless of whether it is a `Dog` or a `Cat`.
+
+- Expected Outcome:
+    - When iterating through the list, the program will call the **MakeNoise()** method for each animal and display their respective sounds (e.g., "Barks" for a Dog, "Meows" for a Cat).
 
 ### 3. Abstract Class and Interface
-Create an abstract class `Shape` with an abstract method `CalculateArea()`. Create an interface Paintable with a method `Paint(color)`. Implement both in the classes `Circle` and `Square` where `CalculateArea()` computes the area of the shape and `Paint(color)` displays a message indicating that the shape has been painted with the specified color.
+- Define an Abstract Class:
+    - Create an abstract class named `Shape`.
+    - Add an abstract method **CalculateArea()** in the class. This method will be implemented by subclasses to calculate the area of specific shapes.
+    - Shape acts as a base class to define common characteristics or behaviors for all shapes.
+
+- Define an Interface:
+    - Create an interface named `Paintable`.
+    - Add a method **Paint(string color)** to the interface. This method will define the behavior for painting a shape with a specific color.
+
+- Implement Both in Subclasses:
+    - Create a class `Circle` that inherits from Shape and implements `Paintable`.
+        - Implement the **CalculateArea()** method to compute the area of a circle using the formula: `π * radius^2`.
+        - Implement the **Paint(color)** method to display a message indicating that the circle has been painted with the specified color.
+    - Create another class Square that also inherits from `Shape` and implements `Paintable`.
+        - Implement the **CalculateArea()** method to compute the area of a square using the formula: `side^2`.
+        - Implement the **Paint(color)** method to display a message indicating that the square has been painted with the specified color.
+
+- Test the Implementation:
+    - Create instances of `Circle` and Square with specific dimensions.
+    - Call the **CalculateArea()** method on each shape and display the result.
+    - Use the **Paint(color)** method on each shape to simulate painting it with a specific color.
+
+- Expected Outcome:
+    - When **CalculateArea()** is called, the program should compute and display the area of the shape based on its dimensions.
+    - When **Paint(color)** is called, the program should display a message indicating the shape has been painted with the specified color.
 
 ### 4. Dependency Injection
-Create a class `Engine` with a method `Function()`. Create a class `Car` that requires an `Engine` object in its constructor. Use dependency injection to pass a specific engine to a `Car` object upon creation. Test multiple types of engines (for example, `GasolineEngine`, `DieselEngine`) that can be injected into the Car.
+- Create a `Class` Engine:
+    - Define a base class `Engine` with a method **Function()**. This method will describe the behavior of the engine (e.g., "Runs on gasoline" or "Runs on diesel").
+    - The `Engine` class will act as the base class for different types of engines.
 
-### 5. Interface, Polymorphism, and Dependency Injection
+- Create Specific `Engine` Subclasses:
+    - Create a subclass `GasolineEngine` that inherits from `Engin`e.
+        Override the Function() method to describe a gasoline engine (e.g., "This engine runs on gasoline.").
+    - Create another subclass `DieselEngine` that also inherits from Engine.
+    - Override the **Function()** method to describe a diesel engine (e.g., "This engine runs on diesel.").
 
-Define an interface `Storage` with a method `Save(data)`. Create two classes that implement this interface: `DiskStorage` and `CloudStorage`. In an Application class, use dependency injection to pass a specific `Storage` implementation to use. Test the application with different storage methods, demonstrating polymorphism in the use of storage strategies.
+- Create a `Class` Car:
+    - Define a class `Car` that requires an Engine object as a parameter in its constructor.
+    - Store the `Engine` object as a dependency of the `Car` object.
+    - Create a method in Car (e.g., **Start()**) that calls the **Function()** method of the Engine to indicate what type of engine the car is using.
 
+- Use Dependency Injection:
+    - When creating a `Car` object, inject a specific type of engine (e.g., GasolineEngine or DieselEngine) via the constructor.
+    - This allows flexibility, as the `Car` object does not need to know the specific type of engine at compile time.
+
+- Test the Implementation:
+    - Create instances of `GasolineEngine` and `DieselEngine`.
+    - Inject each engine type into a `Car` object.
+    - Call the **Start()** method on the `Car` object to verify the correct engine behavior is executed.
+
+- Expected Outcome:
+   -  When a car with a GasolineEngine starts, it should indicate, "This car runs on gasoline."
+    - When a car with a DieselEngine starts, it should indicate, "This car runs on diesel."
 
 ---
 
