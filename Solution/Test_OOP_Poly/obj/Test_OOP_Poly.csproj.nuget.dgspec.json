@@ -1,0 +1,166 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\Test_OOP_Poly\\Test_OOP_Poly.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\OPP_Advanced_Polymorphism.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\OPP_Advanced_Polymorphism.csproj",
+        "projectName": "OPP_Advanced_Polymorphism",
+        "projectPath": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\OPP_Advanced_Polymorphism.csproj",
+        "packagesPath": "C:\\Users\\BeCode\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\BeCode\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\Test_OOP_Poly\\Test_OOP_Poly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\Test_OOP_Poly\\Test_OOP_Poly.csproj",
+        "projectName": "Test_OOP_Poly",
+        "projectPath": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\Test_OOP_Poly\\Test_OOP_Poly.csproj",
+        "packagesPath": "C:\\Users\\BeCode\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\Test_OOP_Poly\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\BeCode\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\OPP_Advanced_Polymorphism.csproj": {
+                "projectPath": "C:\\Users\\BeCode\\OneDrive\\Documents\\csharp-BeCode\\Github_Classroom\\13.csharp.Polymorphism.Advanced\\Solution\\OPP_Advanced_Polymorphism\\OPP_Advanced_Polymorphism.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
